@@ -1,5 +1,6 @@
 package com.github.ki3lmigu3l.vendas.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,7 @@ public class ItemPedido {
 
     @ManyToOne
     @JoinColumn(name = "pedido_ID")
+    @JsonIgnore
     private Pedido pedido;
 
     @ManyToOne
@@ -19,16 +21,16 @@ public class ItemPedido {
     private Produto produto;
 
     @Column(name = "qtd_pedidos")
-    private Integer quantidadeDePedidos;
+    private Integer quantidadeDeItens;
 
     public ItemPedido() {
     }
 
-    public ItemPedido(Integer id, Pedido pedido, Produto produto, Integer quantidadeDePedidos) {
+    public ItemPedido(Integer id, Pedido pedido, Produto produto, Integer quantidadeDeItens) {
         this.id = id;
         this.pedido = pedido;
         this.produto = produto;
-        this.quantidadeDePedidos = quantidadeDePedidos;
+        this.quantidadeDeItens = quantidadeDeItens;
     }
 
     public Integer getId() {
@@ -55,11 +57,11 @@ public class ItemPedido {
         this.produto = produto;
     }
 
-    public Integer getQuantidadeDePedidos() {
-        return quantidadeDePedidos;
+    public Integer getQuantidadeDeItens() {
+        return quantidadeDeItens;
     }
 
-    public void setQuantidadeDePedidos(Integer quantidadeDePedidos) {
-        this.quantidadeDePedidos = quantidadeDePedidos;
+    public void setQuantidadeDeItens(Integer quantidadeDeItens) {
+        this.quantidadeDeItens = quantidadeDeItens;
     }
 }

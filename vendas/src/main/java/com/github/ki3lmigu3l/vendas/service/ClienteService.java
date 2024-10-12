@@ -15,4 +15,6 @@ public interface ClienteService {
     void delete(Cliente c);
 
     List<Cliente> findAll(Example example);
+
+    Optional<Cliente> findById(Integer clienteId);
 }

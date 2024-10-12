@@ -36,4 +36,9 @@ public class ClienteServiceImpl implements ClienteService {
     public List<Cliente> findAll(Example example) {
         return clienteRepository.findAll(example);
     }
+
+    @Override
+    public Optional<Cliente> findById(Integer clienteId) {
+        return clienteRepository.findById(clienteId);
+    }
 }
