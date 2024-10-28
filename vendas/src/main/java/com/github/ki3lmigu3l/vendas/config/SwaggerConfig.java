@@ -22,7 +22,13 @@ public class SwaggerConfig {
     @Bean
     OpenAPI customOpenApi () {
         return new OpenAPI()
-                .info(new Info().title("Vendas API SpringBoot").version("Version: 1.0"));
+                .info(new Info()
+                        .title("Vendas API SpringBoot")
+                        .version("Version: 1.0")
+                        .contact(new Contact()
+                                .email("ki3lmigu3l@gmail.com")
+                                .url("https://github.com/Ki3lMigu3l")
+                                .name("Ezequiel Miguel")));
     }
 
 }
