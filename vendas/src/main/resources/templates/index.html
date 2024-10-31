@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Vendas - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: #007bff;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="hero">
+        <h1>API de Vendas com Spring Boot</h1>
+        <p>Uma solução robusta para gerenciar suas vendas de forma eficiente.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 feature">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li th:each="func : ${funcionalidades}" th:text="${func}">Funcionalidade</li>
+            </ul>
+        </div>
+        <div class="col-md-4 feature">
+            <h2>Como Funciona</h2>
+            <p>A API é construída com Spring Boot e segue as melhores práticas de desenvolvimento, permitindo fácil integração com diferentes sistemas e aplicações.</p>
+        </div>
+        <div class="col-md-4 feature">
+            <h2>Documentação</h2>
+            <p>Para mais informações sobre como usar a API, consulte a documentação completa que acompanha o projeto.</p>
+            <a href="#" class="btn btn-primary">Ver Documentação</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 API de Vendas. Todos os direitos reservados.</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
